@@ -1,15 +1,22 @@
 defmodule LifeCounterApp.GameHelper do
   def friendly_summary do
     LifeCounter.Game.summary
-    |> Enum.map(&friendly_name/1)
+    |> Enum.map(&friendly_player/1)
   end
 
-  defp friendly_name(player) do
-    name =
+  def friendly_player(player) do
+    name = 
       player.name
-      |> String.split("-")
-      |> hd
+      |> friendly_name()
 
     %{name: name, points: player.points}
   end
+
+  def friendly_name(name) do
+    name
+      |> String.split("-")
+      |> Enum.slice(0..-2)
+      |> Enum.join("-")
+  end
+
 end
