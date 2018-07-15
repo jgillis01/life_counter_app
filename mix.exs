@@ -38,7 +38,7 @@ defmodule LifeCounterApp.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      {:life_counter, path: "../life_counter"}
+      {:life_counter, github: "jgillis01/life_counter"}
     ]
   end
 end
