@@ -1,0 +1,2 @@
+<%= render LifeCounterAppWeb.GameView, "player.html", current_player: @current_player %>
+<%= render LifeCounterAppWeb.GameView, "all_for_one_summary.html", game_summary: @game_summary %>

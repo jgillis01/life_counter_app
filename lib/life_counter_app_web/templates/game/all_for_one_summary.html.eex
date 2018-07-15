@@ -1,0 +1,30 @@
+<div class="row">
+  <h2 class="col text-center">Game Summary</h2>
+</div>
+<div class="row" id="app">
+  <table class="table table-striped col" id="summary">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Points</th>
+        <th>Adjustments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for player <- @game_summary do %>
+      <tr class="summary-item">
+        <td><%= friendly_name(player.name) %></td>
+        <td><%= player.points %></td>
+        <td>
+          <button id="btn-down" class="btn btn-primary" data-name="<%= player.name %>">Down</button>
+          <button id="btn-reset" class="btn btn-warning" data-name="<%= player.name %>">Reset Points</button>
+          <button id="btn-leave" class="btn btn-danger" data-name="<%= player.name %>">Leave Game</button>
+          <button id="btn-up" class="btn btn-primary" data-name="<%= player.name %>">Up</button>
+        <td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+

@@ -1,0 +1,12 @@
+/* This file is for your main application css. */
+#name {
+  text-align: center;
+}
+
+.summary-item {
+  font-size: 20pt;
+}
+
+.table {
+  font-size: 20pt;
+}

@@ -1,0 +1,4 @@
+<div id="game">
+  <%= render LifeCounterAppWeb.GameView, "player.html", current_player: @current_player %>
+  <%= render LifeCounterAppWeb.GameView, "one_for_one_summary.html", game_summary: @game_summary %>
+</div>

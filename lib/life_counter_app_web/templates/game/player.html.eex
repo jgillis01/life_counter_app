@@ -1,0 +1,13 @@
+<div class="row">
+  <h1 class="col text-center">
+    <%= friendly_name(@current_player) %>
+  </h1>
+</div>
+<div class="row">
+  <div class="col text-center">
+    <button id="btn-down" class="btn btn-primary" v-on:click="adjustDown('<%= @current_player %>')">Down</button>
+    <button id="btn-reset" class="btn btn-warning" v-on:click="resetPlayer('<%= @current_player %>')">Reset Points</button>
+    <button id="btn-leave" class="btn btn-danger" v-on:click="leaveGame('<%= @current_player %>')">Leave Game</button>
+    <button id="btn-up" class="btn btn-primary" v-on:click="adjustUp('<%= @current_player %>')">Up</button>
+  </div>
+</div>
